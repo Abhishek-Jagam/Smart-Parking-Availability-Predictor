@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data files (Do not upload 332 MB raw CSV to GitHub)
+data.csv
+*.csv
+*.zip
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# Large model artifacts (Generated via notebook)
+models/*.pkl
+*.joblib
+
+# OS & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.ipynb_checkpoints/

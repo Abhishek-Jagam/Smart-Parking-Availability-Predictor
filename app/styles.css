@@ -1,0 +1,283 @@
+/* ==========================================================================
+   ParkWise - Consumer Parking App Stylesheet
+   Palette: Calm Navy (#0f172a, #1e293b), Crisp White, Cool Neutral Slate (#f8fafc, #e2e8f0, #64748b)
+   Teal Accent: #0ea5e9 / #0284c7
+   Status Colors (ONLY for availability):
+     - Easy / Available: Emerald (#059669 / #ecfdf5 / #a7f3d0)
+     - Filling Up: Amber (#d97706 / #fffbeb / #fde68a)
+     - Likely Full: Rose/Coral (#e11d48 / #fff1f2 / #fecdd3)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Base layout & typography */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hide Streamlit default chrome */
+#MainMenu, header, footer, .stDeployButton {
+    visibility: hidden;
+    display: none !important;
+}
+
+/* Constrain main block width on desktop for mobile-first calm appearance */
+.block-container {
+    max-width: 680px !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 3.5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+
+/* App Header & Wordmark */
+.parkwise-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0 1rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.parkwise-wordmark {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.parkwise-logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.parkwise-brand-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.parkwise-brand-tagline {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0;
+}
+
+.parkwise-city-badge {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Result Card Component */
+.result-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.result-card.status-easy {
+    border-left: 6px solid #059669;
+}
+
+.result-card.status-filling {
+    border-left: 6px solid #d97706;
+}
+
+.result-card.status-full {
+    border-left: 6px solid #e11d48;
+}
+
+/* Status Chips & Badges */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+}
+
+.status-pill-easy {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.status-pill-filling {
+    background-color: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.status-pill-full {
+    background-color: #fff1f2;
+    color: #9f1239;
+    border: 1px solid #fecdd3;
+}
+
+/* Big Verdict Headline */
+.verdict-headline {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+.verdict-reason {
+    font-size: 0.92rem;
+    color: #475569;
+    margin-bottom: 1rem;
+    line-height: 1.45;
+}
+
+/* Custom Progress / Fill Level Bar */
+.fill-bar-wrapper {
+    background-color: #f1f5f9;
+    height: 10px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.fill-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+.fill-bar-fill.status-easy {
+    background-color: #059669;
+}
+
+.fill-bar-fill.status-filling {
+    background-color: #d97706;
+}
+
+.fill-bar-fill.status-full {
+    background-color: #e11d48;
+}
+
+.fill-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+}
+
+/* Action Box: Advice & Alternatives */
+.action-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin-top: 1rem;
+}
+
+.action-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #475569;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-text {
+    font-size: 0.9rem;
+    color: #0f172a;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Facility Card (List View) */
+.carpark-item-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.carpark-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carpark-item-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.carpark-item-meta {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* Operating hours warning callout */
+.hours-note {
+    background-color: #f1f5f9;
+    border-left: 4px solid #64748b;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.84rem;
+    color: #334155;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Clean Button Styling */
+div.stButton > button {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 0.55rem 1.25rem !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Expander custom styling */
+.streamlit-expanderHeader {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+}
+

@@ -1,0 +1,13 @@
+Dear Students,
+The Project Report Link and GitHub Repository Link columns have been added to the ML Lab Project shared sheet. Every group must enter both links and complete all the details requested in the sheet.
+Submission of the project report in soft copy is mandatory. Ensure that your report link opens correctly and has the necessary viewing permissions. Your GitHub repository must also be accessible for evaluation.
+Missing, incorrect, or inaccessible links will result in deduction of marks. Check both links carefully before submitting.
+Note: Submit the details group-wise only. Each group must provide one project report link and one GitHub repository link. Individual submissions are not required.
+Complete this submission without delay.
+
+Mini Project (15 marks):
+1: Data Cleaning & Splitting→ 3 Marks
+2: State-of-the-art Models Comparison & Performance Analytics → 4 Marks
+3: UI Deployment & Cross-Platform Accessibility → 4 Marks
+4: Code Quality, GitHub Repo, Report writing & submission → 4 Marks
+    A demo and viva have been scheduled in which students have to justify above metrics and put all points in the 10 pages report.
